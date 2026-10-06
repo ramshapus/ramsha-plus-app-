@@ -1,0 +1,23 @@
+/* رمشة بلس - التصميم الأساسي */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #08080d;
+  color: #ffffff;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
