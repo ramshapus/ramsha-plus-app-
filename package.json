@@ -1,0 +1,14 @@
+{
+  "name": "ramsha-plus-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo Ramsha Plus"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3"
+  }
+}
