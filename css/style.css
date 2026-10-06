@@ -832,52 +832,46 @@ a {
 ===================================================== */
 
 #modal-container {
-  position: fixed;
+  position: fixed !important;
 
-  inset: 0;
+  inset: 0 !important;
 
-  z-index: 1000;
+  z-index: 99999 !important;
 
-  visibility: hidden;
+  display: none;
 
-  pointer-events: none;
+  width: 100%;
+
+  height: 100%;
 
   overflow: hidden;
 }
 
 #modal-container.active {
-  visibility: visible;
-
-  pointer-events: auto;
+  display: block !important;
 }
 
 .modal-overlay {
-  position: absolute;
+  position: fixed !important;
 
-  inset: 0;
+  inset: 0 !important;
 
   width: 100%;
+
   height: 100%;
+
+  padding: 20px;
 
   display: flex;
 
   align-items: center;
-  justify-content: center;
 
-  padding: 20px;
+  justify-content: center;
 
   background:
     rgba(0, 0, 0, 0.72);
 
-  overflow-y: auto;
-
-  overflow-x: hidden;
-
-  -webkit-overflow-scrolling: touch;
-
-  overscroll-behavior: contain;
-
-  touch-action: pan-y;
+  overflow: hidden !important;
 }
 
 .modal {
@@ -888,17 +882,9 @@ a {
   max-height: 85vh;
   max-height: 85dvh;
 
-  flex-shrink: 0;
-
-  overflow-y: auto;
-
-  overflow-x: hidden;
-
-  -webkit-overflow-scrolling: touch;
-
-  touch-action: pan-y;
-
   padding: 25px;
+
+  flex-shrink: 0;
 
   background: #111118;
 
@@ -908,20 +894,31 @@ a {
 
   box-shadow:
     0 30px 100px rgba(0, 0, 0, 0.6);
+
+  overflow-y: auto !important;
+
+  overflow-x: hidden !important;
+
+  -webkit-overflow-scrolling: touch;
+
+  overscroll-behavior: contain;
 }
 
 .modal-close {
   position: absolute;
 
   top: 15px;
+
   left: 15px;
 
   width: 34px;
+
   height: 34px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   color: white;
@@ -966,17 +963,15 @@ a {
 ===================================================== */
 
 .products-list {
+  width: 100%;
+
   display: flex;
 
   flex-direction: column;
 
   gap: 10px;
 
-  width: 100%;
-
-  overflow: visible;
-
-  padding-right: 2px;
+  overflow: visible !important;
 }
 
 .product-card {
@@ -987,6 +982,7 @@ a {
   display: flex;
 
   align-items: center;
+
   justify-content: space-between;
 
   padding: 16px;
@@ -1036,6 +1032,8 @@ a {
 ===================================================== */
 
 .plans-list {
+  width: 100%;
+
   display: flex;
 
   flex-direction: column;
@@ -1044,9 +1042,7 @@ a {
 
   margin-top: 20px;
 
-  width: 100%;
-
-  overflow: visible;
+  overflow: visible !important;
 }
 
 .plan-button {
@@ -1057,6 +1053,7 @@ a {
   display: flex;
 
   align-items: center;
+
   justify-content: space-between;
 
   padding: 15px;
@@ -1196,6 +1193,7 @@ a {
   position: fixed;
 
   top: 20px;
+
   left: 20px;
 
   z-index: 2000;
@@ -1277,6 +1275,7 @@ a {
   position: fixed;
 
   left: 20px;
+
   bottom: 20px;
 
   z-index: 1900;
@@ -1323,6 +1322,7 @@ a {
   display: flex;
 
   align-items: center;
+
   justify-content: space-between;
 
   padding: 16px;
@@ -1345,11 +1345,13 @@ a {
 
 .ramash-header button {
   width: 34px;
+
   height: 34px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   color: white;
@@ -1456,7 +1458,7 @@ a {
 }
 
 /* =====================================================
-   ORDERS PAGE
+   ORDERS / ACCOUNT
 ===================================================== */
 
 .orders-page,
@@ -1538,7 +1540,7 @@ a {
 }
 
 /* =====================================================
-   ACCOUNT PAGE
+   ACCOUNT
 ===================================================== */
 
 .account-card {
@@ -1559,11 +1561,13 @@ a {
 
 .account-avatar {
   width: 65px;
+
   height: 65px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   margin: 0 auto 15px;
@@ -1671,7 +1675,9 @@ a {
   position: fixed;
 
   bottom: 0;
+
   right: 0;
+
   left: 0;
 
   z-index: 1800;
@@ -1714,6 +1720,7 @@ a {
   flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 2px;
@@ -1779,6 +1786,7 @@ a {
 
   .hero-logo {
     width: 125px;
+
     height: 125px;
 
     border-radius: 27px;
@@ -1824,22 +1832,16 @@ a {
     padding: 30px 20px;
   }
 
-  /* =========================
-     المودال بالجوال
-  ========================= */
+  /* =================================================
+     MODAL MOBILE
+  ================================================= */
 
   .modal-overlay {
-    align-items: flex-end;
-
     padding: 10px;
 
-    overflow-y: auto;
+    align-items: flex-end;
 
-    overflow-x: hidden;
-
-    -webkit-overflow-scrolling: touch;
-
-    touch-action: pan-y;
+    overflow: hidden !important;
   }
 
   .modal {
@@ -1848,31 +1850,29 @@ a {
     max-height: 88vh;
     max-height: 88dvh;
 
-    margin-top: auto;
+    margin: 0;
 
     padding: 22px 18px;
 
     border-radius: 22px;
 
-    overflow-y: auto;
+    overflow-y: auto !important;
 
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 
     -webkit-overflow-scrolling: touch;
 
-    touch-action: pan-y;
+    overscroll-behavior: contain;
   }
 
   .products-list,
   .plans-list {
-    max-height: none;
-
-    overflow: visible;
+    overflow: visible !important;
   }
 
-  /* =========================
-     رمّاش
-  ========================= */
+  /* =================================================
+     رَمّاش
+  ================================================= */
 
   .ramash-window {
     left: 10px;
@@ -1890,9 +1890,9 @@ a {
     border-radius: 20px;
   }
 
-  /* =========================
+  /* =================================================
      الصفحات
-  ========================= */
+  ================================================= */
 
   .orders-page,
   .account-page {
@@ -1909,9 +1909,9 @@ a {
     padding-bottom: 120px;
   }
 
-  /* =========================
-     التنبيهات
-  ========================= */
+  /* =================================================
+     TOAST
+  ================================================= */
 
   #toast-container {
     top: 15px;
@@ -1927,9 +1927,9 @@ a {
     max-width: none;
   }
 
-  /* =========================
-     القائمة السفلية
-  ========================= */
+  /* =================================================
+     NAVIGATION
+  ================================================= */
 
   .bottom-navigation {
     width: 94%;
@@ -2019,27 +2019,4 @@ a {
     rgba(139, 92, 246, 0.35);
 
   color: white;
-}
-/* اختبار تمرير النافذة */
-#modal-container.active {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 99999 !important;
-  display: block !important;
-}
-
-#modal-container.active .modal-overlay {
-  position: fixed !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-}
-
-#modal-container.active .modal {
-  max-height: 85vh !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  touch-action: pan-y !important;
 }
