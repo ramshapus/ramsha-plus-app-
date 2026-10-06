@@ -1,11 +1,12 @@
 // رمشة بلس - تشغيل واجهة التطبيق
+
 document.addEventListener("DOMContentLoaded", () => {
   renderHeader();
   renderHome();
   renderFooter();
   renderRamash();
+  renderNavigation();
 });
-
 
 
 function renderHeader() {
@@ -56,7 +57,7 @@ function renderHome() {
 
       <div class="hero-logo">
         <img
-          src="assets/images/logo.jpeg"
+          src="assets/images/IMG_2359.jpeg"
           alt="رمشة بلس"
         >
       </div>
@@ -173,7 +174,8 @@ function renderHome() {
 
 
 function renderCategories() {
-  const container = document.getElementById("categories-container");
+  const container =
+    document.getElementById("categories-container");
 
   if (!container) return;
 
@@ -187,7 +189,9 @@ function renderCategories() {
     card.className = "category-card";
 
     card.innerHTML = `
-      <span class="category-icon">${category.icon}</span>
+      <span class="category-icon">
+        ${category.icon}
+      </span>
 
       <h3>${category.title}</h3>
 
@@ -212,7 +216,8 @@ function openCategory(categoryKey) {
 
   if (!category) return;
 
-  const modal = document.getElementById("modal-container");
+  const modal =
+    document.getElementById("modal-container");
 
   if (!modal) return;
 
@@ -245,11 +250,13 @@ function openCategory(categoryKey) {
             >
 
               <div>
+
                 <h3>${product.name}</h3>
 
                 <p>
                   ${product.description || "اختر الخدمة المناسبة لك"}
                 </p>
+
               </div>
 
               <span>›</span>
@@ -270,7 +277,8 @@ function openCategory(categoryKey) {
 
 
 function closeModal() {
-  const modal = document.getElementById("modal-container");
+  const modal =
+    document.getElementById("modal-container");
 
   if (!modal) return;
 
@@ -280,9 +288,15 @@ function closeModal() {
 
 
 function renderReviews() {
-  const container = document.getElementById("reviews-container");
+  const container =
+    document.getElementById("reviews-container");
 
   if (!container) return;
+
+  if (!reviews || reviews.length === 0) {
+    container.innerHTML = "";
+    return;
+  }
 
   container.innerHTML = `
     <div class="review-card">
@@ -308,7 +322,8 @@ function renderReviews() {
 
     index = (index + 1) % reviews.length;
 
-    const text = document.getElementById("review-text");
+    const text =
+      document.getElementById("review-text");
 
     if (text) {
       text.textContent = reviews[index];
@@ -319,7 +334,8 @@ function renderReviews() {
 
 
 function renderFooter() {
-  const footer = document.getElementById("footer");
+  const footer =
+    document.getElementById("footer");
 
   if (!footer) return;
 
