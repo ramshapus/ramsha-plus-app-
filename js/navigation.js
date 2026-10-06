@@ -60,12 +60,42 @@ function goToServices() {
 function goToOrders() {
   setActiveNavigation(2);
 
-  showToast(
-    "قسم الطلبات بنجهزه لك قريب 🔥",
-    "success"
-  );
-}
+  const main = document.getElementById("main-content");
+  if (!main) return;
 
+  main.innerHTML = `
+    <section class="orders-page">
+      <div class="section-heading">
+        <span>طلباتي</span>
+        <h2>تابع طلباتك</h2>
+        <p>هنا بتظهر طلباتك وحالتها بعد إتمام الطلب</p>
+      </div>
+
+      <div class="empty-orders">
+        <div class="empty-orders-icon">📦</div>
+
+        <h3>ما عندك طلبات حالياً</h3>
+
+        <p>
+          إذا طلبت خدمة أو اشتراك، بتظهر تفاصيل طلبك هنا.
+        </p>
+
+        <button
+          type="button"
+          class="primary-button"
+          onclick="goToServices()"
+        >
+          استعرض الخدمات
+        </button>
+      </div>
+    </section>
+  `;
+  
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
 
 function goToAccount() {
   setActiveNavigation(3);
