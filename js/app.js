@@ -1,4 +1,4 @@
-// رمشة بلس - تشغيل واجهة التطبيق
+// رمشة بلس - واجهة التطبيق
 
 document.addEventListener("DOMContentLoaded", () => {
   renderHeader();
@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ================================
+// ==============================
 // الهيدر
-// ================================
+// ==============================
 
 function renderHeader() {
   const header = document.getElementById("header");
@@ -49,9 +49,9 @@ function renderHeader() {
 }
 
 
-// ================================
+// ==============================
 // الصفحة الرئيسية
-// ================================
+// ==============================
 
 function renderHome() {
   const main = document.getElementById("main-content");
@@ -59,7 +59,7 @@ function renderHome() {
 
   main.innerHTML = `
 
-    <!-- الرئيسية -->
+    <!-- البداية -->
 
     <section class="hero">
 
@@ -162,49 +162,7 @@ function renderHome() {
     </section>
 
 
-    <!-- الدفع -->
-
-    <section class="payment-section">
-
-      <div class="section-heading">
-
-        <span>الدفع</span>
-
-        <h2>
-          دفع آمن وسهل
-        </h2>
-
-        <p>
-          نوفر لك خيارات دفع إلكترونية آمنة
-        </p>
-
-      </div>
-
-      <div class="payment-card">
-
-        <div class="payment-icon">
-          💳
-        </div>
-
-        <h3>
-          دفع آمن عبر هلا
-        </h3>
-
-        <p>
-          بعد تأكيد طلبك يتم تجهيز الفاتورة
-          وإرسالها لك بطريقة آمنة.
-        </p>
-
-        <div class="payment-badge">
-          دفع إلكتروني آمن
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- التقييمات -->
+    <!-- آراء العملاء -->
 
     <section
       id="reviews"
@@ -230,7 +188,7 @@ function renderHome() {
     </section>
 
 
-    <!-- خطوات الطلب -->
+    <!-- طريقة الطلب -->
 
     <section class="steps-section">
 
@@ -243,7 +201,7 @@ function renderHome() {
         </h2>
 
         <p>
-          أربع خطوات بسيطة وتكون خدمتك عندك
+          خطوات بسيطة من الاختيار إلى استلام خدمتك
         </p>
 
       </div>
@@ -259,7 +217,7 @@ function renderHome() {
           </h3>
 
           <p>
-            حدد الخدمة التي تحتاجها
+            حدد القسم المناسب للخدمة التي تحتاجها
           </p>
 
         </div>
@@ -274,7 +232,7 @@ function renderHome() {
           </h3>
 
           <p>
-            اختر المنتج أو الباقة المناسبة
+            اختر المنتج أو الباقة المناسبة لك
           </p>
 
         </div>
@@ -285,11 +243,11 @@ function renderHome() {
           <span>3</span>
 
           <h3>
-            أكد طلبك
+            أكد الطلب
           </h3>
 
           <p>
-            أدخل بياناتك وأرسل الطلب
+            أدخل بياناتك وأكد طلبك
           </p>
 
         </div>
@@ -300,11 +258,11 @@ function renderHome() {
           <span>4</span>
 
           <h3>
-            استلم خدمتك
+            ادفع واستلم
           </h3>
 
           <p>
-            يتم تنفيذ طلبك بأسرع وقت
+            تصلك فاتورة هلا وبعد الدفع يتم تنفيذ طلبك
           </p>
 
         </div>
@@ -367,7 +325,6 @@ function renderHome() {
 
       </div>
 
-
       <div class="contact-card">
 
         <div class="contact-icon">
@@ -401,9 +358,9 @@ function renderHome() {
 }
 
 
-// ================================
-// الأقسام
-// ================================
+// ==============================
+// عرض الأقسام
+// ==============================
 
 function renderCategories() {
   const container =
@@ -459,15 +416,14 @@ function renderCategories() {
       );
 
       container.appendChild(card);
-
     }
   );
 }
 
 
-// ================================
-// المنتجات
-// ================================
+// ==============================
+// فتح المنتجات
+// ==============================
 
 function openCategory(categoryKey) {
   const category =
@@ -510,41 +466,41 @@ function openCategory(categoryKey) {
 
         <div class="products-list">
 
-          ${category.products
-            .map(product => `
+          ${category.products.map(
+            product => `
 
-              <button
-                type="button"
-                class="product-card"
-                onclick="selectProduct(
-                  '${categoryKey}',
-                  '${product.id}'
-                )"
-              >
+            <button
+              type="button"
+              class="product-card"
+              onclick="selectProduct(
+                '${categoryKey}',
+                '${product.id}'
+              )"
+            >
 
-                <div>
+              <div>
 
-                  <h3>
-                    ${product.name}
-                  </h3>
+                <h3>
+                  ${product.name}
+                </h3>
 
-                  <p>
-                    ${
-                      product.description ||
-                      "اختر الخدمة المناسبة لك"
-                    }
-                  </p>
+                <p>
+                  ${
+                    product.description ||
+                    "اختر الخدمة المناسبة لك"
+                  }
+                </p>
 
-                </div>
+              </div>
 
-                <span>
-                  ›
-                </span>
+              <span>
+                ›
+              </span>
 
-              </button>
+            </button>
 
-            `)
-            .join("")}
+          `
+          ).join("")}
 
         </div>
 
@@ -558,9 +514,9 @@ function openCategory(categoryKey) {
 }
 
 
-// ================================
-// إغلاق النوافذ
-// ================================
+// ==============================
+// إغلاق النافذة
+// ==============================
 
 function closeModal() {
   const modal =
@@ -570,17 +526,15 @@ function closeModal() {
 
   if (!modal) return;
 
-  modal.classList.remove(
-    "active"
-  );
+  modal.classList.remove("active");
 
   modal.innerHTML = "";
 }
 
 
-// ================================
+// ==============================
 // التقييمات
-// ================================
+// ==============================
 
 function renderReviews() {
   const container =
@@ -642,9 +596,9 @@ function renderReviews() {
 }
 
 
-// ================================
-// تقييم التجربة
-// ================================
+// ==============================
+// نموذج التقييم
+// ==============================
 
 function openReviewForm() {
   window.open(
@@ -654,9 +608,9 @@ function openReviewForm() {
 }
 
 
-// ================================
+// ==============================
 // الفوتر
-// ================================
+// ==============================
 
 function renderFooter() {
   const footer =
