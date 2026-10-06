@@ -6,7 +6,9 @@
     "build": "echo Ramsha Plus"
   },
   "dependencies": {
-    "@capacitor/core": "^7.4.3"
+    "@capacitor/android": "^7.6.9",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/ios": "^7.6.9"
   },
   "devDependencies": {
     "@capacitor/cli": "^7.4.3"
