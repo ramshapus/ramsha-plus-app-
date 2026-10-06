@@ -100,8 +100,60 @@ function goToOrders() {
 function goToAccount() {
   setActiveNavigation(3);
 
-  showToast(
-    "الحساب الشخصي بنجهزه لك قريب 🔥",
-    "success"
-  );
+  const main = document.getElementById("main-content");
+  if (!main) return;
+
+  main.innerHTML = `
+    <section class="account-page">
+
+      <div class="section-heading">
+        <span>حسابي</span>
+        <h2>حسابك في رمشة بلس</h2>
+        <p>إدارة حسابك والوصول للخدمات بسهولة</p>
+      </div>
+
+      <div class="account-card">
+
+        <div class="account-avatar">
+          👤
+        </div>
+
+        <h3>مرحباً بك 👋</h3>
+
+        <p>
+          سجّل بياناتك أثناء الطلب عشان نقدر نخدمك بشكل أفضل.
+        </p>
+
+        <div class="account-options">
+
+          <button type="button" onclick="goToOrders()">
+            <span>📦</span>
+            <div>
+              <strong>طلباتي</strong>
+              <small>متابعة الطلبات والخدمات</small>
+            </div>
+            <b>‹</b>
+          </button>
+
+          <button type="button" onclick="openWhatsApp()">
+            <span>💬</span>
+            <div>
+              <strong>الدعم</strong>
+              <small>تواصل مع رمشة بلس</small>
+            </div>
+            <b>‹</b>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+  `;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
+
