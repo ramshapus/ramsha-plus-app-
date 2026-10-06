@@ -1,6 +1,5 @@
 /* =====================================================
-   رمشة بلس - التطبيق
-   style.css
+   رمشة بلس - style.css
 ===================================================== */
 
 :root {
@@ -48,9 +47,11 @@ body {
       transparent 35%
     ),
     var(--bg);
+
   color: var(--text);
   font-family: Tahoma, Arial, sans-serif;
   line-height: 1.7;
+
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -121,9 +122,12 @@ a {
 
 .nav-button {
   padding: 8px 12px;
+
   color: var(--text-soft);
   background: transparent;
+
   border-radius: 10px;
+
   transition: 0.2s;
 }
 
@@ -143,12 +147,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   text-align: center;
 }
 
 .hero-logo {
   width: 150px;
   height: 150px;
+
   margin-bottom: 25px;
 
   display: flex;
@@ -156,6 +162,7 @@ a {
   justify-content: center;
 
   background: var(--card);
+
   border: 1px solid var(--border);
   border-radius: 32px;
 
@@ -168,6 +175,7 @@ a {
 .hero-logo img {
   width: 100%;
   height: 100%;
+
   object-fit: contain;
   padding: 10px;
 }
@@ -181,7 +189,9 @@ a {
   padding: 7px 13px;
 
   color: #d4d4d8;
+
   background: rgba(34, 197, 94, 0.08);
+
   border: 1px solid rgba(34, 197, 94, 0.16);
   border-radius: 999px;
 
@@ -191,16 +201,22 @@ a {
 .online-badge span {
   width: 7px;
   height: 7px;
+
   border-radius: 50%;
+
   background: var(--success);
-  box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+
+  box-shadow:
+    0 0 12px rgba(34, 197, 94, 0.8);
 }
 
 .hero h1 {
   max-width: 800px;
+
   font-size: clamp(34px, 6vw, 62px);
   line-height: 1.2;
   font-weight: 900;
+
   margin-bottom: 18px;
 }
 
@@ -215,11 +231,13 @@ a {
 
   -webkit-background-clip: text;
   background-clip: text;
+
   color: transparent;
 }
 
 .hero > p {
   max-width: 600px;
+
   color: var(--text-soft);
   font-size: 15px;
 }
@@ -230,6 +248,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -241,11 +260,13 @@ a {
 .primary-button,
 .secondary-button {
   min-height: 46px;
+
   padding: 0 20px;
 
   border-radius: 13px;
 
   font-weight: 800;
+
   transition: 0.2s;
 }
 
@@ -264,19 +285,24 @@ a {
 
 .primary-button:hover {
   transform: translateY(-2px);
+
   box-shadow:
     0 12px 35px rgba(109, 40, 217, 0.32);
 }
 
 .secondary-button {
   color: white;
+
   background: var(--card);
+
   border: 1px solid var(--border);
 }
 
 .secondary-button:hover {
   background: var(--card-hover);
-  border-color: rgba(139, 92, 246, 0.3);
+
+  border-color:
+    rgba(139, 92, 246, 0.3);
 }
 
 /* =====================================================
@@ -299,9 +325,11 @@ a {
 
 .section-heading > span {
   display: inline-block;
+
   margin-bottom: 5px;
 
   color: var(--purple-light);
+
   font-size: 12px;
   font-weight: 800;
 }
@@ -313,6 +341,7 @@ a {
 
 .section-heading p {
   margin-top: 5px;
+
   color: var(--text-soft);
   font-size: 13px;
 }
@@ -323,15 +352,20 @@ a {
 
 .trust-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
   gap: 15px;
 }
 
 .trust-card {
   padding: 25px;
+
   text-align: center;
 
   background: var(--card);
+
   border: 1px solid var(--border);
   border-radius: var(--radius);
 
@@ -340,18 +374,24 @@ a {
 
 .trust-card:hover {
   transform: translateY(-4px);
+
   background: var(--card-hover);
-  border-color: rgba(139, 92, 246, 0.25);
+
+  border-color:
+    rgba(139, 92, 246, 0.25);
 }
 
 .trust-card > span {
   display: block;
+
   margin-bottom: 10px;
+
   font-size: 30px;
 }
 
 .trust-card h3 {
   font-size: 15px;
+
   margin-bottom: 4px;
 }
 
@@ -366,7 +406,10 @@ a {
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
   gap: 15px;
 }
 
@@ -378,7 +421,9 @@ a {
   text-align: right;
 
   color: white;
+
   background: var(--card);
+
   border: 1px solid var(--border);
   border-radius: var(--radius);
 
@@ -387,18 +432,24 @@ a {
 
 .category-card:hover {
   transform: translateY(-4px);
+
   background: var(--card-hover);
-  border-color: rgba(139, 92, 246, 0.3);
+
+  border-color:
+    rgba(139, 92, 246, 0.3);
 }
 
 .category-icon {
   display: block;
+
   margin-bottom: 12px;
+
   font-size: 30px;
 }
 
 .category-card h3 {
   font-size: 17px;
+
   margin-bottom: 4px;
 }
 
@@ -409,10 +460,12 @@ a {
 
 .category-arrow {
   position: absolute;
+
   left: 20px;
   bottom: 20px;
 
   color: var(--purple-light);
+
   font-size: 20px;
 }
 
@@ -422,12 +475,15 @@ a {
 
 .review-card {
   width: min(650px, 100%);
+
   margin: 0 auto;
 
   padding: 30px;
+
   text-align: center;
 
   background: var(--card);
+
   border: 1px solid var(--border);
   border-radius: var(--radius);
 
@@ -437,21 +493,28 @@ a {
 
 .review-stars {
   margin-bottom: 12px;
+
   color: #facc15;
+
   letter-spacing: 3px;
   font-size: 18px;
 }
 
 .review-card p {
   min-height: 30px;
+
   color: white;
+
   font-size: 15px;
 }
 
 .review-card > span {
   display: block;
+
   margin-top: 8px;
+
   color: var(--text-muted);
+
   font-size: 11px;
 }
 
@@ -461,7 +524,9 @@ a {
 
 .steps-section {
   width: min(1100px, 92%);
+
   margin: 0 auto 110px;
+
   text-align: center;
 }
 
@@ -473,10 +538,14 @@ a {
 .steps-grid {
   width: 100%;
   max-width: 900px;
+
   margin: 35px auto 0;
 
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
   gap: 15px;
 }
 
@@ -484,13 +553,16 @@ a {
   text-align: center;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
   padding: 25px;
 
   background: var(--card);
+
   border: 1px solid var(--border);
   border-radius: var(--radius);
 
@@ -501,8 +573,11 @@ a {
 
 .step-card:hover {
   transform: translateY(-4px);
+
   background: var(--card-hover);
-  border-color: rgba(139, 92, 246, 0.3);
+
+  border-color:
+    rgba(139, 92, 246, 0.3);
 }
 
 .step-card > span {
@@ -510,6 +585,7 @@ a {
   height: 42px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -530,6 +606,7 @@ a {
 
 .step-card h3 {
   font-size: 16px;
+
   margin-bottom: 5px;
 }
 
@@ -544,6 +621,7 @@ a {
 
 .review-cta-card {
   width: min(700px, 100%);
+
   margin: 0 auto;
 
   padding: 35px 25px;
@@ -557,24 +635,31 @@ a {
       rgba(17, 17, 24, 0.9)
     );
 
-  border: 1px solid rgba(139, 92, 246, 0.18);
+  border:
+    1px solid rgba(139, 92, 246, 0.18);
+
   border-radius: var(--radius);
 }
 
 .review-cta-card > span {
   display: block;
+
   margin-bottom: 8px;
+
   font-size: 30px;
 }
 
 .review-cta-card h2 {
   font-size: 24px;
+
   margin-bottom: 5px;
 }
 
 .review-cta-card p {
   color: var(--text-soft);
+
   font-size: 13px;
+
   margin-bottom: 20px;
 }
 
@@ -584,6 +669,7 @@ a {
 
 .contact-card {
   width: min(650px, 100%);
+
   margin: 0 auto;
 
   padding: 30px;
@@ -591,23 +677,28 @@ a {
   text-align: center;
 
   background: var(--card);
+
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
 
 .contact-icon {
   margin-bottom: 10px;
+
   font-size: 35px;
 }
 
 .contact-card h3 {
   font-size: 18px;
+
   margin-bottom: 4px;
 }
 
 .contact-card p {
   color: var(--text-soft);
+
   font-size: 13px;
+
   margin-bottom: 20px;
 }
 
@@ -625,17 +716,21 @@ a {
 
 .footer-content {
   width: min(900px, 92%);
+
   margin: 0 auto;
+
   text-align: center;
 }
 
 .footer-content h3 {
   font-size: 20px;
+
   margin-bottom: 5px;
 }
 
 .footer-content > p {
   color: var(--text-soft);
+
   font-size: 12px;
 }
 
@@ -643,9 +738,12 @@ a {
   margin: 20px 0;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 8px;
+
   flex-wrap: wrap;
 }
 
@@ -653,6 +751,7 @@ a {
   padding: 7px 10px;
 
   color: var(--text-soft);
+
   background: transparent;
 
   font-size: 11px;
@@ -668,12 +767,15 @@ a {
 
 .footer-verification p {
   color: var(--text-muted);
+
   font-size: 10px;
 }
 
 .copyright {
   margin-top: 15px;
+
   color: var(--text-muted) !important;
+
   font-size: 10px !important;
 }
 
@@ -688,9 +790,11 @@ a {
 
 .modal-overlay {
   position: fixed;
+
   inset: 0;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -699,20 +803,29 @@ a {
   background: rgba(0, 0, 0, 0.72);
 
   backdrop-filter: blur(8px);
+
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal {
   position: relative;
 
   width: min(520px, 100%);
+
   max-height: 85vh;
 
   overflow-y: auto;
 
+  -webkit-overflow-scrolling: touch;
+
   padding: 25px;
 
   background: #111118;
+
   border: 1px solid var(--border);
+
   border-radius: 24px;
 
   box-shadow:
@@ -721,6 +834,7 @@ a {
 
 .modal-close {
   position: absolute;
+
   top: 15px;
   left: 15px;
 
@@ -728,10 +842,12 @@ a {
   height: 34px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   color: white;
+
   background: rgba(255, 255, 255, 0.06);
 
   border-radius: 50%;
@@ -740,15 +856,19 @@ a {
 }
 
 .modal-close:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background:
+    rgba(255, 255, 255, 0.1);
 }
 
 .modal-title {
   display: flex;
+
   align-items: center;
+
   gap: 10px;
 
   margin-bottom: 20px;
+
   padding-left: 40px;
 }
 
@@ -766,24 +886,40 @@ a {
 
 .products-list {
   display: flex;
+
   flex-direction: column;
+
   gap: 10px;
+
+  max-height: 60vh;
+
+  overflow-y: auto;
+
+  padding-right: 2px;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .product-card {
   width: 100%;
 
+  flex-shrink: 0;
+
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 
   padding: 16px;
 
   text-align: right;
+
   color: white;
 
   background: var(--card);
+
   border: 1px solid var(--border);
+
   border-radius: 15px;
 
   transition: 0.2s;
@@ -791,22 +927,28 @@ a {
 
 .product-card:hover {
   background: var(--card-hover);
-  border-color: rgba(139, 92, 246, 0.3);
+
+  border-color:
+    rgba(139, 92, 246, 0.3);
+
   transform: translateX(-2px);
 }
 
 .product-card h3 {
   font-size: 14px;
+
   margin-bottom: 3px;
 }
 
 .product-card p {
   color: var(--text-soft);
+
   font-size: 11px;
 }
 
 .product-card > span {
   color: var(--purple-light);
+
   font-size: 24px;
 }
 
@@ -816,24 +958,38 @@ a {
 
 .plans-list {
   display: flex;
+
   flex-direction: column;
+
   gap: 10px;
+
   margin-top: 20px;
+
+  max-height: 60vh;
+
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .plan-button {
   width: 100%;
 
+  flex-shrink: 0;
+
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 
   padding: 15px;
 
   color: white;
+
   background: var(--card);
 
   border: 1px solid var(--border);
+
   border-radius: 14px;
 
   transition: 0.2s;
@@ -841,16 +997,20 @@ a {
 
 .plan-button:hover {
   background: var(--card-hover);
-  border-color: rgba(139, 92, 246, 0.35);
+
+  border-color:
+    rgba(139, 92, 246, 0.35);
 }
 
 .plan-button span {
   color: var(--text-soft);
+
   font-size: 13px;
 }
 
 .plan-button strong {
   color: var(--purple-light);
+
   font-size: 14px;
 }
 
@@ -860,20 +1020,27 @@ a {
 
 .checkout-modal h2 {
   padding-left: 45px;
+
   margin-bottom: 20px;
+
   font-size: 21px;
 }
 
 .order-summary {
   display: flex;
+
   flex-direction: column;
+
   gap: 7px;
 
   margin-bottom: 20px;
+
   padding: 16px;
 
   background: var(--card);
+
   border: 1px solid var(--border);
+
   border-radius: 15px;
 }
 
@@ -883,23 +1050,29 @@ a {
 
 .order-summary span {
   color: var(--text-soft);
+
   font-size: 12px;
 }
 
 .order-summary strong:last-child {
   color: var(--purple-light);
+
   font-size: 15px;
 }
 
 .order-form p {
   margin-bottom: 18px;
+
   color: var(--text-soft);
+
   font-size: 13px;
 }
 
 .checkout-modal form {
   display: flex;
+
   flex-direction: column;
+
   gap: 10px;
 }
 
@@ -910,9 +1083,12 @@ a {
   padding: 0 14px;
 
   color: white;
-  background: rgba(255, 255, 255, 0.04);
+
+  background:
+    rgba(255, 255, 255, 0.04);
 
   border: 1px solid var(--border);
+
   border-radius: 13px;
 
   outline: none;
@@ -923,7 +1099,9 @@ a {
 }
 
 .checkout-modal input:focus {
-  border-color: rgba(139, 92, 246, 0.55);
+  border-color:
+    rgba(139, 92, 246, 0.55);
+
   box-shadow:
     0 0 0 3px rgba(139, 92, 246, 0.08);
 }
@@ -945,7 +1123,9 @@ a {
   z-index: 2000;
 
   display: flex;
+
   flex-direction: column;
+
   gap: 10px;
 }
 
@@ -958,27 +1138,34 @@ a {
   color: white;
 
   background: #171720;
+
   border: 1px solid var(--border);
+
   border-radius: 13px;
 
   box-shadow:
     0 15px 50px rgba(0, 0, 0, 0.4);
 
   animation: toastIn 0.25s ease;
+
   font-size: 12px;
 }
 
 .toast-success {
-  border-color: rgba(34, 197, 94, 0.25);
+  border-color:
+    rgba(34, 197, 94, 0.25);
 }
 
 .toast-error {
-  border-color: rgba(239, 68, 68, 0.3);
+  border-color:
+    rgba(239, 68, 68, 0.3);
 }
 
 .toast.hide {
   opacity: 0;
+
   transform: translateY(-10px);
+
   transition: 0.3s;
 }
 
@@ -997,7 +1184,7 @@ a {
 /* =====================================================
    رَمّاش
    الزر العائم مخفي
-   لكن نافذة رَمّاش تبقى شغالة
+   النافذة تبقى شغالة
 ===================================================== */
 
 .ramash-button {
@@ -1013,14 +1200,17 @@ a {
   z-index: 1900;
 
   width: min(370px, calc(100% - 40px));
+
   height: 500px;
 
   display: flex;
+
   flex-direction: column;
 
   background: #111118;
 
   border: 1px solid var(--border);
+
   border-radius: 22px;
 
   overflow: hidden;
@@ -1029,28 +1219,34 @@ a {
     0 25px 90px rgba(0, 0, 0, 0.55);
 
   opacity: 0;
+
   visibility: hidden;
 
-  transform: translateY(15px) scale(0.97);
+  transform:
+    translateY(15px) scale(0.97);
 
   transition: 0.25s;
 }
 
 .ramash-window.active {
   opacity: 1;
+
   visibility: visible;
 
-  transform: translateY(0) scale(1);
+  transform:
+    translateY(0) scale(1);
 }
 
 .ramash-header {
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 
   padding: 16px;
 
-  background: rgba(139, 92, 246, 0.1);
+  background:
+    rgba(139, 92, 246, 0.1);
 
   border-bottom: 1px solid var(--border);
 }
@@ -1061,6 +1257,7 @@ a {
 
 .ramash-header span {
   color: var(--text-soft);
+
   font-size: 11px;
 }
 
@@ -1069,11 +1266,14 @@ a {
   height: 34px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   color: white;
-  background: rgba(255, 255, 255, 0.06);
+
+  background:
+    rgba(255, 255, 255, 0.06);
 
   border-radius: 50%;
 
@@ -1081,7 +1281,8 @@ a {
 }
 
 .ramash-header button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background:
+    rgba(255, 255, 255, 0.1);
 }
 
 .ramash-messages {
@@ -1092,8 +1293,12 @@ a {
   padding: 15px;
 
   display: flex;
+
   flex-direction: column;
+
   gap: 10px;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .ramash-message {
@@ -1124,6 +1329,7 @@ a {
 
 .ramash-form {
   display: flex;
+
   gap: 8px;
 
   padding: 12px;
@@ -1133,23 +1339,28 @@ a {
 
 .ramash-form input {
   flex: 1;
+
   min-width: 0;
+
   height: 44px;
 
   padding: 0 12px;
 
   color: white;
 
-  background: rgba(255, 255, 255, 0.05);
+  background:
+    rgba(255, 255, 255, 0.05);
 
   border: 1px solid var(--border);
+
   border-radius: 12px;
 
   outline: none;
 }
 
 .ramash-form input:focus {
-  border-color: rgba(139, 92, 246, 0.5);
+  border-color:
+    rgba(139, 92, 246, 0.5);
 }
 
 .ramash-form button {
@@ -1169,6 +1380,7 @@ a {
 .orders-page,
 .account-page {
   width: min(900px, 92%);
+
   min-height: 70vh;
 
   margin: 40px auto 100px;
@@ -1176,16 +1388,21 @@ a {
 
 .page-back-button {
   display: inline-flex;
+
   align-items: center;
+
   gap: 7px;
 
   margin-bottom: 35px;
+
   padding: 9px 14px;
 
   color: var(--text-soft);
+
   background: var(--card);
 
   border: 1px solid var(--border);
+
   border-radius: 12px;
 
   font-size: 12px;
@@ -1195,12 +1412,16 @@ a {
 
 .page-back-button:hover {
   color: white;
-  border-color: rgba(139, 92, 246, 0.3);
+
+  border-color:
+    rgba(139, 92, 246, 0.3);
+
   background: var(--card-hover);
 }
 
 .empty-orders {
   width: min(650px, 100%);
+
   margin: 0 auto;
 
   padding: 45px 25px;
@@ -1208,23 +1429,29 @@ a {
   text-align: center;
 
   background: var(--card);
+
   border: 1px solid var(--border);
+
   border-radius: 24px;
 }
 
 .empty-orders-icon {
   margin-bottom: 10px;
+
   font-size: 45px;
 }
 
 .empty-orders h3 {
   margin-bottom: 5px;
+
   font-size: 18px;
 }
 
 .empty-orders p {
   margin-bottom: 20px;
+
   color: var(--text-soft);
+
   font-size: 13px;
 }
 
@@ -1234,6 +1461,7 @@ a {
 
 .account-card {
   width: min(650px, 100%);
+
   margin: 0 auto;
 
   padding: 35px 25px;
@@ -1241,7 +1469,9 @@ a {
   text-align: center;
 
   background: var(--card);
+
   border: 1px solid var(--border);
+
   border-radius: 24px;
 }
 
@@ -1250,14 +1480,18 @@ a {
   height: 65px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   margin: 0 auto 15px;
 
-  background: rgba(139, 92, 246, 0.12);
+  background:
+    rgba(139, 92, 246, 0.12);
 
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  border:
+    1px solid rgba(139, 92, 246, 0.2);
+
   border-radius: 50%;
 
   font-size: 28px;
@@ -1265,20 +1499,25 @@ a {
 
 .account-card h3 {
   font-size: 19px;
+
   margin-bottom: 5px;
 }
 
 .account-card > p {
   max-width: 450px;
+
   margin: 0 auto 25px;
 
   color: var(--text-soft);
+
   font-size: 12px;
 }
 
 .account-options {
   display: flex;
+
   flex-direction: column;
+
   gap: 10px;
 }
 
@@ -1286,17 +1525,22 @@ a {
   width: 100%;
 
   display: flex;
+
   align-items: center;
+
   gap: 13px;
 
   padding: 15px;
 
   text-align: right;
+
   color: white;
 
-  background: rgba(255, 255, 255, 0.03);
+  background:
+    rgba(255, 255, 255, 0.03);
 
   border: 1px solid var(--border);
+
   border-radius: 15px;
 
   transition: 0.2s;
@@ -1304,7 +1548,9 @@ a {
 
 .account-options button:hover {
   background: var(--card-hover);
-  border-color: rgba(139, 92, 246, 0.3);
+
+  border-color:
+    rgba(139, 92, 246, 0.3);
 }
 
 .account-options button > span {
@@ -1317,17 +1563,21 @@ a {
 
 .account-options strong {
   display: block;
+
   font-size: 13px;
 }
 
 .account-options small {
   display: block;
+
   color: var(--text-soft);
+
   font-size: 10px;
 }
 
 .account-options b {
   color: var(--purple-light);
+
   font-size: 20px;
 }
 
@@ -1349,16 +1599,21 @@ a {
 
 .bottom-navigation {
   width: min(520px, 94%);
+
   height: 70px;
 
   margin: 0 auto 12px;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
 
-  background: rgba(17, 17, 24, 0.94);
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  background:
+    rgba(17, 17, 24, 0.94);
 
   border: 1px solid var(--border);
+
   border-radius: 22px;
 
   backdrop-filter: blur(18px);
@@ -1373,13 +1628,16 @@ a {
 
 .nav-item {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
   gap: 2px;
 
   color: var(--text-soft);
+
   background: transparent;
 
   transition: 0.2s;
@@ -1387,11 +1645,14 @@ a {
 
 .nav-item:hover {
   color: white;
-  background: rgba(139, 92, 246, 0.05);
+
+  background:
+    rgba(139, 92, 246, 0.05);
 }
 
 .nav-item span {
   font-size: 22px;
+
   line-height: 1;
 }
 
@@ -1424,17 +1685,20 @@ a {
 
   .nav-button {
     padding: 7px 8px;
+
     font-size: 11px;
   }
 
   .hero {
     margin-top: 40px;
+
     margin-bottom: 70px;
   }
 
   .hero-logo {
     width: 125px;
     height: 125px;
+
     border-radius: 27px;
   }
 
@@ -1448,6 +1712,7 @@ a {
 
   .hero-actions {
     width: 100%;
+
     flex-direction: column;
   }
 
@@ -1465,7 +1730,9 @@ a {
 
   .steps-grid {
     grid-template-columns: 1fr;
+
     max-width: 420px;
+
     margin-left: auto;
     margin-right: auto;
   }
@@ -1474,29 +1741,57 @@ a {
     padding: 30px 20px;
   }
 
+  /* المودال بالجوال */
+
   .modal-overlay {
     align-items: flex-end;
+
     padding: 10px;
+
+    overflow-y: auto;
   }
 
   .modal {
+    width: 100%;
+
     max-height: 88vh;
+
     border-radius: 22px;
+
+    margin-top: auto;
   }
+
+  .products-list {
+    max-height: 58vh;
+  }
+
+  .plans-list {
+    max-height: 58vh;
+  }
+
+  /* رمّاش */
 
   .ramash-window {
     left: 10px;
     bottom: 85px;
 
     width: calc(100% - 20px);
-    height: min(520px, calc(100vh - 110px));
+
+    height:
+      min(
+        520px,
+        calc(100vh - 110px)
+      );
 
     border-radius: 20px;
   }
 
+  /* الصفحات */
+
   .orders-page,
   .account-page {
     margin-top: 30px;
+
     margin-bottom: 110px;
   }
 
@@ -1508,21 +1803,30 @@ a {
     padding-bottom: 120px;
   }
 
+  /* التنبيهات */
+
   #toast-container {
     top: 15px;
+
     left: 15px;
     right: 15px;
   }
 
   .toast {
     width: 100%;
+
     max-width: none;
   }
 
+  /* القائمة السفلية */
+
   .bottom-navigation {
     width: 94%;
+
     height: 66px;
+
     margin-bottom: 8px;
+
     border-radius: 20px;
   }
 
@@ -1583,12 +1887,15 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.35);
+  background:
+    rgba(139, 92, 246, 0.35);
+
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(139, 92, 246, 0.55);
+  background:
+    rgba(139, 92, 246, 0.55);
 }
 
 /* =====================================================
@@ -1596,6 +1903,8 @@ a {
 ===================================================== */
 
 ::selection {
-  background: rgba(139, 92, 246, 0.35);
+  background:
+    rgba(139, 92, 246, 0.35);
+
   color: white;
 }
