@@ -1,0 +1,8 @@
+{
+  "appId": "sa.ramshaplus.app",
+  "appName": "رمشة بلس",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https"
+  }
+}
