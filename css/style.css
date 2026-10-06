@@ -1318,3 +1318,108 @@ img {
 
   background: var(--purple);
 }
+/* =====================================================
+   طريقة الطلب - ترتيب التطبيق
+===================================================== */
+
+.steps-section {
+  width: min(1100px, 92%);
+  margin: 0 auto 110px;
+  text-align: center;
+}
+
+.steps-section .section-heading {
+  text-align: center;
+  width: 100%;
+}
+
+.steps-grid {
+  width: 100%;
+  max-width: 900px;
+  margin: 35px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.step-card {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  min-height: 160px;
+
+  transition: 0.25s;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+
+  background: var(--card-hover);
+
+  border-color:
+    rgba(139, 92, 246, 0.3);
+}
+
+.step-card > span {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--purple),
+      var(--purple-dark)
+    );
+
+  font-weight: 900;
+}
+
+.step-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.step-card p {
+  color: var(--text-soft);
+  font-size: 13px;
+}
+
+
+/* الجوال */
+
+@media (max-width: 600px) {
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 420px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
