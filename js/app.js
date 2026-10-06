@@ -1,10 +1,11 @@
 // رمشة بلس - تشغيل واجهة التطبيق
-
 document.addEventListener("DOMContentLoaded", () => {
   renderHeader();
   renderHome();
   renderFooter();
+  renderRamash();
 });
+
 
 
 function renderHeader() {
