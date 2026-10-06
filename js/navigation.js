@@ -44,6 +44,9 @@ function setActiveNavigation(buttonIndex) {
 
 function goToHome() {
   setActiveNavigation(0);
+
+  renderHome();
+
   window.scrollTo({
     top: 0,
     behavior: "smooth"
@@ -53,7 +56,12 @@ function goToHome() {
 
 function goToServices() {
   setActiveNavigation(1);
-  scrollToElement("services");
+
+  renderHome();
+
+  setTimeout(() => {
+    scrollToElement("services");
+  }, 50);
 }
 
 
@@ -61,20 +69,39 @@ function goToOrders() {
   setActiveNavigation(2);
 
   const main = document.getElementById("main-content");
+
   if (!main) return;
 
   main.innerHTML = `
     <section class="orders-page">
+
+      <button
+        type="button"
+        class="page-back-button"
+        onclick="goToHome()"
+      >
+        ← الرئيسية
+      </button>
+
       <div class="section-heading">
         <span>طلباتي</span>
+
         <h2>تابع طلباتك</h2>
-        <p>هنا بتظهر طلباتك وحالتها بعد إتمام الطلب</p>
+
+        <p>
+          هنا بتظهر طلباتك وحالتها بعد إتمام الطلب
+        </p>
       </div>
 
       <div class="empty-orders">
-        <div class="empty-orders-icon">📦</div>
 
-        <h3>ما عندك طلبات حالياً</h3>
+        <div class="empty-orders-icon">
+          📦
+        </div>
+
+        <h3>
+          ما عندك طلبات حالياً
+        </h3>
 
         <p>
           إذا طلبت خدمة أو اشتراك، بتظهر تفاصيل طلبك هنا.
@@ -87,29 +114,45 @@ function goToOrders() {
         >
           استعرض الخدمات
         </button>
+
       </div>
+
     </section>
   `;
-  
+
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
 }
 
+
 function goToAccount() {
   setActiveNavigation(3);
 
   const main = document.getElementById("main-content");
+
   if (!main) return;
 
   main.innerHTML = `
     <section class="account-page">
 
+      <button
+        type="button"
+        class="page-back-button"
+        onclick="goToHome()"
+      >
+        ← الرئيسية
+      </button>
+
       <div class="section-heading">
         <span>حسابي</span>
+
         <h2>حسابك في رمشة بلس</h2>
-        <p>إدارة حسابك والوصول للخدمات بسهولة</p>
+
+        <p>
+          إدارة حسابك والوصول للخدمات بسهولة
+        </p>
       </div>
 
       <div class="account-card">
@@ -118,7 +161,9 @@ function goToAccount() {
           👤
         </div>
 
-        <h3>مرحباً بك 👋</h3>
+        <h3>
+          مرحباً بك 👋
+        </h3>
 
         <p>
           سجّل بياناتك أثناء الطلب عشان نقدر نخدمك بشكل أفضل.
@@ -126,21 +171,32 @@ function goToAccount() {
 
         <div class="account-options">
 
-          <button type="button" onclick="goToOrders()">
+          <button
+            type="button"
+            onclick="goToOrders()"
+          >
             <span>📦</span>
+
             <div>
               <strong>طلباتي</strong>
               <small>متابعة الطلبات والخدمات</small>
             </div>
+
             <b>‹</b>
           </button>
 
-          <button type="button" onclick="openWhatsApp()">
+
+          <button
+            type="button"
+            onclick="openWhatsApp()"
+          >
             <span>💬</span>
+
             <div>
               <strong>الدعم</strong>
               <small>تواصل مع رمشة بلس</small>
             </div>
+
             <b>‹</b>
           </button>
 
@@ -156,4 +212,3 @@ function goToAccount() {
     behavior: "smooth"
   });
 }
-
